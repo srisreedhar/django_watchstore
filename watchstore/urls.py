@@ -16,6 +16,15 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from dukaan.views import dukaanam , index
+# this worked, this should've been done, imported app.views into project views and ran the server
+# ok, first import all the views from the app,
+# then, add all the urls using just include, for now go on.
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^dukaan/$',dukaanam),
+    # url(r'^index/$',index), uncomment to include .com/index/ as url
+    url(r'^$',index, name='index'),
+
 ]

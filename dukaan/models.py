@@ -15,4 +15,8 @@ class Watch(models.Model):
     stock = models.IntegerField(default=0)
 
 
+    def __unicode__(self):
+        return "%s,  %d" %(self.company, self.stock)
+
+
 

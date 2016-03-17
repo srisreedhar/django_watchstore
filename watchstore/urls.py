@@ -13,18 +13,20 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
-from django.contrib import admin
 
-from dukaan.views import dukaanam , index, stock
+from django.conf.urls import url, include
+from django.contrib import admin
+from dukaan.views import dukaanam, index, stock
+
 # this worked, this should've been done, imported app.views into project views and ran the server
 # ok, first import all the views from the app,
 # then, add all the urls using just include, for now go on.
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^dukaan/$',dukaanam),
+    url(r'^dukaan/$', dukaanam),
     # url(r'^index/$',index), uncomment to include .com/index/ as url
-    url(r'^$',index, name='index'),
-    url(r'^stock/$',stock),
+    url(r'^$', index, name='index'),
+    url(r'^stock/$', stock),
+    url(r'^accounts/', include('registration.backends.default.urls')),
             ]

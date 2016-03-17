@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'registration',
+    'registration',
     'dukaan',
 
 ]
@@ -123,4 +123,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# add registration details here
+# Add registration details here
+# django-registration-redux
+
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True
+
+

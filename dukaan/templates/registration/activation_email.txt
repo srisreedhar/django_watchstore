@@ -12,4 +12,4 @@ to activate your account.
 The above activation link is valid for (( expiration_days }}.
 
 
-
+- The Dukaan Team
